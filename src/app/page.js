@@ -1,4 +1,6 @@
 import Hero from "../components/Hero";
+import UseCases from "../components/UseCases";
+import FAQ from "../components/FAQ";
 import { Cpu, Zap, Shield, CheckCircle } from "lucide-react";
 
 export default function Home() {
@@ -63,6 +65,8 @@ export default function Home() {
                 </div>
             </section>
 
+            <UseCases />
+
             {/* Testimonials */}
             <section className="py-24 px-6">
                 <div className="container mx-auto max-w-6xl">
@@ -81,6 +85,8 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            <FAQ />
         </>
     );
 }

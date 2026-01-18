@@ -6,8 +6,12 @@ import { ArrowRight } from "lucide-react";
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-            {/* Background Glow */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] -z-10" />
+            {/* Background Image & Glow */}
+            <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 bg-background/80 z-10" /> {/* Overlay for readability */}
+                <img src="/images/hero.png" alt="Neural Network Background" className="w-full h-full object-cover opacity-60" />
+            </div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] z-0" />
 
             <div className="container mx-auto px-6 text-center z-10">
                 <motion.div
