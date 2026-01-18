@@ -19,6 +19,18 @@ export default function sitemap() {
             priority: 0.8,
         },
         {
+            url: 'https://entric.xyz/blog',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
+            url: 'https://entric.xyz/blog/what-is-agentic-ai',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
             url: 'https://entric.xyz/contact',
             lastModified: new Date(),
             changeFrequency: 'yearly',
