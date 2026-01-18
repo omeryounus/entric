@@ -19,7 +19,6 @@ export default function Navbar() {
     const navLinks = [
         { name: "Architecture", href: "/architecture" },
         { name: "Manifesto", href: "/manifesto" },
-        { name: "Contact", href: "/contact" },
     ];
 
     return (
@@ -53,7 +52,7 @@ export default function Navbar() {
                         href="/contact"
                         className="px-5 py-2 rounded-full bg-surface border border-border hover:bg-white/10 transition-all text-sm font-semibold"
                     >
-                        Get Started
+                        Initialize
                     </Link>
                 </div>
 
@@ -86,6 +85,13 @@ export default function Navbar() {
                                     {link.name}
                                 </Link>
                             ))}
+                            <Link
+                                href="/contact"
+                                className="text-lg font-medium text-primary"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Initialize
+                            </Link>
                         </div>
                     </motion.div>
                 )}
