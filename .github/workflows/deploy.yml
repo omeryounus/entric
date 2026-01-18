@@ -30,7 +30,7 @@ jobs:
           cd .next/standalone
           # Copy static assets to standalone directory to ensure they are available
           cp -r ../static ./.next/static
-          tar -czf deploy.tar.gz .
+          tar --warning=no-file-changed -czf deploy.tar.gz .
 
       - name: Deploy to Server
         uses: appleboy/scp-action@v0.1.7

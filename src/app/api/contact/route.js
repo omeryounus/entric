@@ -31,7 +31,7 @@ export async function POST(request) {
 
         return Response.json({ success: true });
     } catch (error) {
-        console.error(error);
-        return Response.json({ error: 'Failed to send email' }, { status: 500 });
+        console.error("Nodemailer Error:", error);
+        return Response.json({ error: 'Failed to send email', details: error.message }, { status: 500 });
     }
 }
