@@ -44,9 +44,31 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Entric",
+        "url": "https://entric.xyz",
+        "logo": "https://entric.xyz/logo.png",
+        "description": "Autonomous AI agents and intelligent infrastructure for the modern enterprise.",
+        "sameAs": [
+            "https://twitter.com/entric_xyz",
+            "https://linkedin.com/company/entric"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "hello@entric.xyz"
+        }
+    };
+
     return (
         <html lang="en" className="scroll-smooth">
             <body className={`${outfit.className} bg-background text-text-primary antialiased`}>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
                 <Navbar />
                 <main className="min-h-screen">
                     {children}
