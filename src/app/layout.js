@@ -39,7 +39,7 @@ export const metadata = {
     },
     metadataBase: new URL("https://entric.xyz"),
     icons: {
-        icon: "/favicon.ico",
+        icon: "/icon.png",
     },
 };
 

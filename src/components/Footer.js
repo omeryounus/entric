@@ -6,9 +6,9 @@ export default function Footer() {
         <footer className="border-t border-border mt-20 bg-background/50 backdrop-blur-lg">
             <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center">
                 <div className="mb-8">
-                    <span className="text-2xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                        ENTRIC
-                    </span>
+                    <div className="mb-8">
+                        <img src="/images/logo.png" alt="Entric" className="h-10 w-auto opacity-80" />
+                    </div>
                 </div>
 
                 <div className="flex gap-8 mb-8">
