@@ -17,18 +17,18 @@ export default function Home() {
                     <div className="grid md:grid-cols-3 gap-8">
                         <ServiceCard
                             icon={<Cpu size={40} className="text-primary" />}
-                            title="Agentic Workflows"
-                            desc="Replace repetitive cognitive tasks with intelligent agents that learn and adapt. Perfect for support and research."
+                            title="Cognitive Process Automation"
+                            desc="Deterministic automation breaks. Our probabilistic agents adapt to schema shifts and unstructured data, ensuring 99.9% uptime."
                         />
                         <ServiceCard
                             icon={<Zap size={40} className="text-accent" />}
-                            title="Robotic Process Automation"
-                            desc="Hard-coded bridge scripts for legacy software that lacks APIs. Streamline invoices, HR, and logistics."
+                            title="Enterprise Knowledge Retrieval"
+                            desc="Synthesize fragmented institutional knowledge (PDFs, SQL, Slack) into instant executive-level insights via neural retrieval."
                         />
                         <ServiceCard
                             icon={<Shield size={40} className="text-secondary" />}
-                            title="Security & Governance"
-                            desc="AI that monitors AI. Audit logs, access control, and threat detection built into every deployment."
+                            title="Multi-Agent Orchestration"
+                            desc="Deploy specialized agent swarms that collaborate, critique, and execute complex workflows faster than humanly possible."
                         />
                     </div>
                 </div>
@@ -41,23 +41,23 @@ export default function Home() {
                     <div className="space-y-12 relative border-l-2 border-border ml-4 md:ml-12 pl-8 md:pl-16">
                         <TimelineItem
                             step="01"
-                            title="Discovery"
-                            desc="We analyze your current workflows to identify bottlenecks and automation opportunities."
+                            title="System Audit"
+                            desc="We map your entire digital topology to identify operational bottlenecks and legacy debt. No guessing."
                         />
                         <TimelineItem
                             step="02"
-                            title="Strategy"
-                            desc="Our engineers design a custom bespoke architecture tailored to your business needs."
+                            title="Neural Design"
+                            desc="We blueprint custom agentic workflows tailored to your security compliance and latency requirements."
                         />
                         <TimelineItem
                             step="03"
-                            title="Implementation"
-                            desc="We build and deploy intelligent agents and scripts, ensuring seamless integration."
+                            title="Synaptic Deployment"
+                            desc="Seamless integration directly into your stack (AWS, Azure, On-Prem). No rip-and-replace."
                         />
                         <TimelineItem
                             step="04"
-                            title="Optimization"
-                            desc="Continuous monitoring and refinement to ensure maximum efficiency and ROI."
+                            title="Autonomous Handover"
+                            desc="We deliver self-optimizing systems. You own the code, the weights, and the future."
                         />
                     </div>
                 </div>
@@ -69,14 +69,14 @@ export default function Home() {
                     <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Client Stories</h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         <TestimonialCard
-                            quote="Entric completely transformed our backend operations. Tasks that took days now take minutes."
+                            quote="Entric didn't just automate our support; they re-architected our entire intake logic. We reduced ticket resolution latency by 40% in Week 1."
                             author="Marcus Chen"
-                            role="CTO, FinTech Sol"
+                            role="Director of Operations, FinTech"
                         />
                         <TestimonialCard
-                            quote="The AI agents they built handle 80% of our customer queries autonomously. Incredible."
+                            quote="We were drowning in unstructured legal data. Entric’s retrieval system now parses 500+ contracts in seconds. It’s not a tool; it’s a superpower."
                             author="Sarah Jenkins"
-                            role="Director of Ops, Retailio"
+                            role="General Counsel, Enterprise Logistics"
                         />
                     </div>
                 </div>

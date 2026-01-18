@@ -16,14 +16,14 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-accent text-sm font-medium mb-6 backdrop-blur-sm">
-                        The Future of Autonomous Enterprise
+                        Architecting the Synthetic Workforce
                     </span>
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                         Automate the <br />
                         <span className="text-gradient">Impossible</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto mb-10">
-                        We deploy autonomous AI agents that architect your workflows, securities, and operations. 24/7 reliability. Zero friction.
+                    <p className="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+                        We do not build chatbots. We engineer autonomous <span className="text-white">neural infrastructure</span> that dismantles operational complexity.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -31,13 +31,13 @@ export default function Hero() {
                             href="/contact"
                             className="px-8 py-4 rounded-full bg-primary-gradient text-white font-bold text-lg hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-1 transition-all flex items-center gap-2"
                         >
-                            Start Building <ArrowRight size={20} />
+                            Initialize Transformation <ArrowRight size={20} />
                         </Link>
                         <Link
-                            href="/about"
+                            href="/architecture"
                             className="px-8 py-4 rounded-full bg-transparent border border-border text-white font-semibold hover:bg-white/5 transition-all"
                         >
-                            View Our Work
+                            View Architecture
                         </Link>
                     </div>
                 </motion.div>

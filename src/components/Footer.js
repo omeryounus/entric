@@ -19,16 +19,16 @@ export default function Footer() {
                 </div>
 
                 <div className="flex gap-8 mb-8 text-sm text-text-muted">
-                    <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
-                    <Link href="/process" className="hover:text-primary transition-colors">Method</Link>
-                    <Link href="/about" className="hover:text-primary transition-colors">About</Link>
+                    <Link href="/architecture" className="hover:text-primary transition-colors">Architecture</Link>
+                    <Link href="/manifesto" className="hover:text-primary transition-colors">Manifesto</Link>
+                    <Link href="/contact" className="hover:text-primary transition-colors">Initialize</Link>
                 </div>
 
                 <p className="text-text-dim text-sm">
-                    &copy; {new Date().getFullYear()} Entric. Automate the Impossible.
+                    &copy; {new Date().getFullYear()} Entric. Intelligence deployed.
                 </p>
             </div>
-        </footer>
+        </footer >
     );
 }
 
