@@ -20,7 +20,7 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-accent text-sm font-medium mb-6 backdrop-blur-sm">
-                        Architecting the Synthetic Workforce
+                        Intelligence Deployed
                     </span>
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                         Automate the <br />
