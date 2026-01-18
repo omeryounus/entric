@@ -30,7 +30,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
-                    <img src="/images/logo.png" alt="Entric Logo" className="h-8 w-auto object-contain" />
+                    <img src="/images/logo.png" alt="Entric Logo" className="h-14 w-auto object-contain" />
                 </Link>
 
                 {/* Desktop Links */}
