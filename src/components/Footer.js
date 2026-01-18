@@ -25,7 +25,7 @@ export default function Footer() {
                 </div>
 
                 <p className="text-text-dim text-sm">
-                    &copy; {new Date().getFullYear()} Entric Inc. All rights reserved.
+                    &copy; {new Date().getFullYear()} Entric. Automate the Impossible.
                 </p>
             </div>
         </footer>
