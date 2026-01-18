@@ -1,0 +1,46 @@
+import Link from "next/link";
+import { Twitter, Instagram, Youtube, Facebook } from "lucide-react";
+
+export default function Footer() {
+    return (
+        <footer className="border-t border-border mt-20 bg-background/50 backdrop-blur-lg">
+            <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center">
+                <div className="mb-8">
+                    <span className="text-2xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                        ENTRIC
+                    </span>
+                </div>
+
+                <div className="flex gap-8 mb-8">
+                    <SocialLink href="https://x.com" icon={<Twitter size={20} />} />
+                    <SocialLink href="https://instagram.com" icon={<Instagram size={20} />} />
+                    <SocialLink href="https://youtube.com" icon={<Youtube size={20} />} />
+                    <SocialLink href="https://facebook.com" icon={<Facebook size={20} />} />
+                </div>
+
+                <div className="flex gap-8 mb-8 text-sm text-text-muted">
+                    <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
+                    <Link href="/process" className="hover:text-primary transition-colors">Method</Link>
+                    <Link href="/about" className="hover:text-primary transition-colors">About</Link>
+                </div>
+
+                <p className="text-text-dim text-sm">
+                    &copy; {new Date().getFullYear()} Entric Inc. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    );
+}
+
+function SocialLink({ href, icon }) {
+    return (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 rounded-full bg-surface border border-border flex items-center justify-center text-text-muted hover:text-white hover:border-primary hover:bg-primary/10 transition-all"
+        >
+            {icon}
+        </a>
+    );
+}

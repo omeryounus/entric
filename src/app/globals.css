@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 5, 5, 7;
+    --background-end-rgb: 5, 5, 7;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: #050507;
+}
+
+@layer utilities {
+    .text-gradient {
+        background: linear-gradient(135deg, #646cff, #a855f7);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+    }
+
+    .glass-nav {
+        background: rgba(5, 5, 7, 0.7);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
