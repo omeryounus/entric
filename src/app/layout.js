@@ -10,8 +10,37 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-    title: "Entric | Automate the Impossible",
-    description: "Autonomous AI agents and intelligent infrastructure for the modern enterprise.",
+    title: {
+        default: "Entric | Automate the Impossible",
+        template: "%s | Entric"
+    },
+    description: "We engineer autonomous neural infrastructure for the modern enterprise. Deployment of specialized agent swarms, cognitive automation, and sovereign intelligence.",
+    openGraph: {
+        title: "Entric | Automate the Impossible",
+        description: "We engineer autonomous neural infrastructure for the modern enterprise.",
+        url: "https://entric.xyz",
+        siteName: "Entric",
+        images: [
+            {
+                url: "/images/hero.png",
+                width: 1200,
+                height: 630,
+                alt: "Entric Neural Infrastructure",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Entric | Automate the Impossible",
+        description: "We engineer autonomous neural infrastructure for the modern enterprise.",
+        images: ["/images/hero.png"],
+    },
+    metadataBase: new URL("https://entric.xyz"),
+    icons: {
+        icon: "/favicon.ico",
+    },
 };
 
 export default function RootLayout({ children }) {

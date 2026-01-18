@@ -1,5 +1,6 @@
 export const metadata = {
-    title: "Manifesto | Entric",
+    title: "Manifesto",
+    description: "We are architects of the synthetic workforce. We reject generic chatbots in favor of sovereign, autonomous intelligence.",
 };
 
 export default function Manifesto() {

@@ -85,24 +85,4 @@ function ServiceCard({ icon, title, desc }) {
     );
 }
 
-function TimelineItem({ step, title, desc }) {
-    return (
-        <div className="relative">
-            <div className="absolute -left-[41px] md:-left-[73px] top-1 w-5 h-5 rounded-full bg-primary border-4 border-background shadow-[0_0_15px_rgba(100,108,255,0.5)]"></div>
-            <h3 className="text-2xl font-bold mb-2 text-white"><span className="text-primary mr-2 text-lg align-middle opacity-80">{step}.</span> {title}</h3>
-            <p className="text-text-muted text-lg">{desc}</p>
-        </div>
-    );
-}
 
-function TestimonialCard({ quote, author, role }) {
-    return (
-        <div className="glass-card p-10 rounded-2xl flex flex-col justify-between h-full bg-gradient-to-br from-white/5 to-transparent">
-            <p className="text-lg italic text-text-muted mb-8 leading-relaxed">"{quote}"</p>
-            <div>
-                <strong className="block text-primary text-lg">{author}</strong>
-                <span className="text-sm text-text-dim">{role}</span>
-            </div>
-        </div>
-    );
-}

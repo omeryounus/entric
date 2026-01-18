@@ -1,7 +1,8 @@
 import { Cpu, Zap, Shield, Globe, Database, Lock } from "lucide-react";
 
 export const metadata = {
-    title: "Neural Architecture | Entric",
+    title: "Neural Architecture",
+    description: "Modular intelligence designed for the enterprise stack. Cognitive automation, knowledge retrieval, and swarm orchestration.",
 };
 
 export default function Architecture() {
