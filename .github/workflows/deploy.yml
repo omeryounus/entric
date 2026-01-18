@@ -1,0 +1,67 @@
+name: Deploy to Lightsail
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Next.js
+        run: npm run build
+
+      - name: Create Deployment Archive
+        run: |
+          cd .next/standalone
+          # Copy static assets to standalone directory to ensure they are available
+          cp -r ../static ./.next/static
+          tar -czf deploy.tar.gz .
+
+      - name: Deploy to Server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.LIGHTSAIL_HOST }}
+          username: ${{ secrets.LIGHTSAIL_USER }}
+          key: ${{ secrets.LIGHTSAIL_KEY }}
+          source: ".next/standalone/deploy.tar.gz"
+          target: "/home/${{ secrets.LIGHTSAIL_USER }}"
+          strip_components: 2
+
+      - name: Unpack and Restart
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.LIGHTSAIL_HOST }}
+          username: ${{ secrets.LIGHTSAIL_USER }}
+          key: ${{ secrets.LIGHTSAIL_KEY }}
+          script: |
+            # Extract to a temporary directory first to be safe
+            mkdir -p ~/deploy_temp
+            tar -xzf ~/deploy.tar.gz -C ~/deploy_temp
+            
+            # Atomic update: Replace .next folder
+            sudo rm -rf /var/www/entric-next/.next
+            sudo cp -r ~/deploy_temp/.next /var/www/entric-next/
+            
+            # Copy server.js if it changed (standalone output puts it in root of archive)
+            sudo cp ~/deploy_temp/server.js /var/www/entric-next/
+            
+            # Clean up
+            rm -rf ~/deploy_temp ~/deploy.tar.gz
+            
+            # Restart PM2
+            sudo pm2 restart entric-next
